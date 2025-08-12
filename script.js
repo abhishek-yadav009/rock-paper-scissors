@@ -33,8 +33,8 @@ function playerWin(playerChoice, computerChoice) {
   messageDisplay.innerText = `You win! ${playerChoice} beats ${computerChoice}`;
   messageDisplay.style.backgroundColor = "green";
 }
-// step 7 player loose function {message}
-function playerLoose(playerChoice, computerChoice) {
+// step 7 player lose function {message}
+function playerLose(playerChoice, computerChoice) {
   messageDisplay.innerText = `You lose! ${computerChoice} beats ${playerChoice}`;
   messageDisplay.style.backgroundColor = "red";
 }
@@ -55,7 +55,7 @@ function playRound(playerChoice) {
     playerWin(playerChoice, computerChoice);
   } else {
     compScore++;
-    playerLoose(playerChoice, computerChoice);
+    playerLose(playerChoice, computerChoice);
   }
   // Update scores in UI:
   playerScoreDisplay.innerText = playerScore;
